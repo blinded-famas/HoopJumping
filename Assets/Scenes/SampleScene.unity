@@ -472,9 +472,7 @@ MonoBehaviour:
   - {fileID: 9061178681214070854, guid: f36b9d8296b476748aafe2a5c9d9b2d4, type: 3}
   - {fileID: 7969994926801790942, guid: f0be0773c342572489e89bd72a9d59f7, type: 3}
   offset: {x: 0, y: 0, z: 20}
-  cameraObj: {fileID: 534669902}
-  respawnTime: 1
-  prevObjPosition: {x: 0, y: 0, z: 0}
+  vec: {x: 0, y: 0, z: 0}
 --- !u!1 &445957730
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 604722188}
   score: {fileID: 445957732}
+  hoops: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 604722191}
-  movementSpeed: 250
+  movementSpeed: 50
 --- !u!114 &604722193
 MonoBehaviour:
   m_ObjectHideFlags: 0

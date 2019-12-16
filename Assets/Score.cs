@@ -7,16 +7,15 @@ public class Score : MonoBehaviour
 {
     public GameObject player;
     public Text score;
+    public GameObject hoops;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.name == "Hoops")
+        {
+            Debug.Log("DETECTED");
+        }
     }
 }
