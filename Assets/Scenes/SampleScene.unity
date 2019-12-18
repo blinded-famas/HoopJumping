@@ -544,7 +544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 250
+  m_Text: 0
 --- !u!222 &445957733
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -565,9 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141dd7ead35c6fd44b0811f6bdb54fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 604722188}
   score: {fileID: 445957732}
-  hoops: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +676,8 @@ GameObject:
   - component: {fileID: 604722191}
   - component: {fileID: 604722192}
   - component: {fileID: 604722193}
+  - component: {fileID: 604722195}
+  - component: {fileID: 604722194}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -760,6 +760,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 604722192}
+--- !u!65 &604722194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604722188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &604722195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604722188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 141dd7ead35c6fd44b0811f6bdb54fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 445957732}
 --- !u!1 &746356463
 GameObject:
   m_ObjectHideFlags: 0

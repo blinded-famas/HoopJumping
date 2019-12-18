@@ -5,17 +5,15 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public GameObject player;
+    
     public Text score;
-    public GameObject hoops;
+    int playerScore = 0;
+    
 
-
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.name == "Hoops")
-        {
-            Debug.Log("DETECTED");
-        }
+        playerScore += 1;
+        score.text = playerScore.ToString();
     }
+
 }
