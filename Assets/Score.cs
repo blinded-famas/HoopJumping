@@ -8,12 +8,17 @@ public class Score : MonoBehaviour
     
     public Text score;
     int playerScore = 0;
+    public bool triggerCheck = true;
     
 
     private void OnTriggerEnter(Collider other)
     {
-        playerScore += 1;
-        score.text = playerScore.ToString();
+        if (triggerCheck == true)
+        {
+            playerScore += 1;
+            score.text = playerScore.ToString();
+        }
+        
     }
 
 }
