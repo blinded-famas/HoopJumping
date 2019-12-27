@@ -7,8 +7,10 @@ public class Score : MonoBehaviour
 {
     
     public Text score;
-    int playerScore = 0;
+    public int playerScore;
     public bool triggerCheck = true;
+    public Text scoreValueText;
+    public Text highscoreValueText;
     
 
     private void OnTriggerEnter(Collider other)
@@ -19,6 +21,21 @@ public class Score : MonoBehaviour
             score.text = playerScore.ToString();
         }
         
+    }
+
+    public void setScoreValue()
+    {
+        scoreValueText.text = playerScore.ToString();
+    }
+
+    public void setHighscoreValue()
+    {
+        highscoreValueText.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
+        if (playerScore > PlayerPrefs.GetInt("Highscore", 0))
+        {
+            PlayerPrefs.SetInt("Highscore", playerScore);
+            highscoreValueText.text = playerScore.ToString(); 
+        }
     }
 
 }
