@@ -15,7 +15,7 @@ public class Score : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (triggerCheck == true)
+        if (other.gameObject.tag == "Obstacle" && triggerCheck == true)
         {
             playerScore += 1;
             score.text = playerScore.ToString();

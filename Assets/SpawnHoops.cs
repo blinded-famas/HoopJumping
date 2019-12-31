@@ -6,8 +6,8 @@ using System.Linq;
 public class SpawnHoops : MonoBehaviour
 {
     public GameObject[] hoops;
-    public Vector3 offset;
-    public Vector3 vec;
+    private Vector3 offset;
+    private Vector3 vec;
     public GameObject player;
     GameObject spawnedHoop;
     List<GameObject> createdHoops = new List<GameObject>();

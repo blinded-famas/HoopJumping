@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
             gameHasEnded = true;
             FindObjectOfType<Score>().setScoreValue();
             FindObjectOfType<Score>().setHighscoreValue();
+            FindObjectOfType<OctahedronsCollectingAndStoring>().setOctahedronsValue();
             DisableEndGameMenu();
             Debug.Log("Game END");
             //Invoke("Restart", restartDelay);
