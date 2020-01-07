@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject player;
 
     void Update()
     {
@@ -28,6 +29,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        player.GetComponent<PlayerModelSwitch>().enabled = true;
     }
 
     void Pause()
@@ -35,11 +37,12 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        player.GetComponent<PlayerModelSwitch>().enabled = false;
     }
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 

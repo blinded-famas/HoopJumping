@@ -7,8 +7,13 @@ public class GameManager : MonoBehaviour
     public float restartDelay = 5f;
     public GameObject endGameMenuUI;
     public GameObject scoreCounterUI;
+    public GameObject player;
     
 
+    public void Start()
+    {
+        Time.timeScale = 0f;
+    }
 
     public void EndGame()
     {
@@ -18,6 +23,7 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<Score>().setScoreValue();
             FindObjectOfType<Score>().setHighscoreValue();
             FindObjectOfType<OctahedronsCollectingAndStoring>().setOctahedronsValue();
+            player.GetComponent<PlayerModelSwitch>().enabled = false;
             DisableEndGameMenu();
             Debug.Log("Game END");
             //Invoke("Restart", restartDelay);

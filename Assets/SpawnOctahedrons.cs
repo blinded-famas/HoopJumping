@@ -30,7 +30,7 @@ public class SpawnOctahedrons : MonoBehaviour
     public void DestroyAndCreateNewOctahedrons()
     {
         //compare positions of octahedron and player
-        if ((createdOctahedrons[0].transform.position.z + 5) < player.transform.position.z)
+        if ((createdOctahedrons[0].transform.position.z + 0.1) < player.transform.position.z)
         {
             //destroy hoops
             Destroy(createdOctahedrons[0]);
